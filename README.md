@@ -1,3 +1,3 @@
-# Cyber Lithograph
+# Binaryville
 
 A Cyber NFT Minting PLatform
