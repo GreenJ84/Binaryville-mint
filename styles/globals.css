@@ -17,11 +17,10 @@ body {
 }
 
 :root {
-  color: rgb(44, 49, 44);
   --background: rgb(234, 255, 232);
   /*COLOR*/
   --color-background: #ffffff;
-  --color-navbar: #ebebeb;
+  --color-navbar: #a8a8a8;
 
   --color-main: #ff583d;
   --color-white: #ffffff;
@@ -47,13 +46,14 @@ body {
 
 @font-face {
   font-family: 'Sequel100Black-65';
-  src: local('Sequel100Black-65'), url(./fonts/Sequel100Black-65.ttf) format('opentype');
+  src: local('Sequel100Black-65'), url(../utils/fonts/Sequel100Black-65.ttf) format('opentype');
 }
 
 @font-face {
   font-family: 'Sequel100Black-45';
-  src: local('Sequel100Black-45'), url(./fonts/Sequel100Black-45.ttf) format('opentype');
+  src: local('Sequel100Black-45'), url(../utils/fonts/Sequel100Black-45.ttf) format('opentype');
 }
+
 
 .main {
   margin-bottom: 0px;
