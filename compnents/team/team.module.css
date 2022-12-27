@@ -1,0 +1,90 @@
+.teamBackGround {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-navbar);
+  padding: 5vw 1vw;
+  margin: 5vw 1vw 0;
+  border-radius: 12px;
+}
+
+.teamCard {
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  margin: 0 50px;
+  flex-direction: column;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.teamTitle {
+  font-weight: 400;
+  font-size: 2vw;
+  line-height: 94.8%;
+  text-align: center;
+  color: #ff583d;;
+}
+
+.teamSubTitle {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1.4vw;
+}
+
+.teamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.teamItem {
+  width: 30vw;
+  min-width: 400px;
+  max-width: 480px;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 60px;
+}
+
+.teamItemImage {
+  padding: 50px 30px 20px;
+}
+
+.teamItemTitle {
+  color: var(--color-main);
+}
+
+.teamItemName {
+  margin: 20px 0;
+}
+
+.teamItemPosition {
+}
+
+@media only screen and (max-width: 1100px) {
+  .teamContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .teamBackGround {
+    background-color: var(--color-navbar);
+    padding: 80px 20px;
+    margin: 50px 20px 0;
+    border-radius: 12px;
+  }
+}
