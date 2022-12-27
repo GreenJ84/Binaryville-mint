@@ -4,11 +4,9 @@ import FAQ from '../compnents/faq/FAQ';
 import Roadmap from '../compnents/roadmap/Roadmap';
 import Team from '../compnents/team/Team';
 
-const css = require("../compnents/home.module.css")
-
 const Home = () => {
   return (
-    <div className={ css.main }>
+    <div >
       <About />
       <Roadmap />
       <Team />
