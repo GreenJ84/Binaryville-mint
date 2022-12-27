@@ -1,0 +1,70 @@
+.footerBC {
+  display: flex;
+  justify-content: center;
+  padding: 10vw 0;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(226, 226, 226);
+}
+
+.footerMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 4vw;
+}
+
+.footerIconText {
+  font-weight: 400;
+  font-size: 1.6vw;
+  line-height: 24px;
+  color: var(--color-main);
+  margin-bottom: 21px;
+}
+
+.footerName {
+  font-weight: 400;
+  font-size: 1.6vw;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.footerJoin {
+  color: var(--color-main);
+  font-weight: 400;
+  font-size: 2vw;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.footerLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  cursor: pointer;
+}
+
+.footerLinkText {
+  margin-left: 23px;
+  font-weight: 400;
+  font-size: 1.4vw;
+  line-height: 24px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .footerContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
