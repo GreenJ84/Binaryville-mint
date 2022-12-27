@@ -1,4 +1,4 @@
-.componentFirst {
+.aboutBC {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -42,7 +42,7 @@
   max-width: 667px;
 }
 
-.aboutBoxIMG1 {
+.aboutBoxIMG {
   width: 100%;
 }
 
@@ -54,39 +54,33 @@
 }
 
 .aboutTextContainer {
-  width: 100%;
+  position: relative;
+  margin: 8vw auto;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 100px;
 }
 
 .aboutText {
-  max-width: 750px;
+  font-size: 1.8vw;
   text-align: center;
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 1400px) {
-  .aboutBoxIMG {
-    width: 100%;
-  }
+@media only screen and (max-width: 1000px) {
   .about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
     flex-direction: column;
   }
+}
+
+@media only screen and (max-width: 1400px) {
   .aboutBox {
-    border-radius: 12px;
-    width: 100%;
     max-width: 630px;
   }
   .aboutRight {
     align-items: center;
-    justify-content: center;
   }
   .aboutRightBottom {
     max-width: 630px;

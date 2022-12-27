@@ -30,8 +30,8 @@ const Footer = () => {
             Open sea
           </div>
           <div className={css.footerName}>
-            Cyber Lithograph
-          </div>
+            Binaryville
+        </div>
 
           <div className={css.footerJoin}>
             Join us

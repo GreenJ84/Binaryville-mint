@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
 
 import  Logo from '../../utils/icons/Logo.svg'
 import header1 from '../../utils/image/header1.png'
@@ -8,52 +9,32 @@ import header2 from '../../utils/image/header2.png'
 const css = require('./navbar.module.css')
 
 const Navbar = () => {
-  const handleMint = () => { }
-  
-  const handleAbout = () => {
-    var scroll = document.getElementsByClassName('aboutBC') as HTMLCollectionOf<HTMLElement>;
-    window.scroll({ behavior: 'smooth', top: scroll[0].offsetTop })
-  }
-  const handleRoadmap = () => {
-    var scroll = document.getElementsByClassName('roadmapBC') as HTMLCollectionOf<HTMLElement>;
-    window.scroll({ behavior: 'smooth', top: scroll[0].offsetTop - 20 })
-  }
-  const handleTeam = () => {
-    var scroll = document.getElementsByClassName('teamBackGround') as HTMLCollectionOf<HTMLElement>;
-    window.scroll({ behavior: 'smooth', top: scroll[0].offsetTop - 20 })
-  }
-  const handleFaq = () => {
-    var scroll = document.getElementsByClassName('faqScroll') as HTMLCollectionOf<HTMLElement>;
-    window.scroll({ behavior: 'smooth', top: scroll[0].offsetTop + 20 })
-  }
 
   return (
     <div className={ css.navbar}>
       <div className={ css.navbarContainer }>
-        <div className={ css.navbarLeft}></div>
-        <div className={ css.navbarCenter }>
+        <div className={ css.navbarTop }>
           <div className={ css.navbarCenterTop }>
             <Image src={Logo} alt='' className={css.logo } />
           </div>
           <div className={ css.navbarCenterBottom }>
-            <div className={ css.navbarCenterItem} onClick={handleMint}>
+            <Link className={ css.navbarCenterItem} href='#mint'>
               Mint
-            </div>
-            <div className={ css.navbarCenterItem} onClick={handleAbout}>
-              About CL
-            </div>
-            <div className={ css.navbarCenterItem} onClick={handleRoadmap}>
+            </Link>
+            <Link className={ css.navbarCenterItem} href='#about'>
+              About Binaryville
+            </Link>
+            <Link className={ css.navbarCenterItem} href='#roadmap'>
               Roadmap
-            </div>
-            <div className={ css.navbarCenterItem} onClick={handleTeam}>
+            </Link>
+            <Link className={ css.navbarCenterItem} href='#team'>
               Team
-            </div>
-            <div className={ css.navbarCenterItem} onClick={handleFaq}>
+            </Link>
+            <Link className={ css.navbarCenterItem} href='#faq'>
               FAQ
-            </div>
+            </Link>
           </div>
         </div>
-        <div className={ css.navbarRight }></div>
       </div>
 
       <div className={ css.navbarContainer }>
@@ -63,7 +44,7 @@ const Navbar = () => {
         <div className={ css.navbarCenter }>
           <div className={ css.navbarBox }>
             <div className={ css.navbarBoxTitle }>
-              <span className={ css.textHighlight }>Welcome</span> to Cyber Lithograph
+              <span className={ css.textHighlight }>Welcome</span> to Binaryville
             </div>
             <div className={ css.navbarBoxSubTitle }>a collection of 5,000 unique NFTs</div>
             <div className={ css.navbarBoxButton }>MINT NOW</div>

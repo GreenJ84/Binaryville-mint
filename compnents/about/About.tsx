@@ -12,7 +12,7 @@ import Image from 'next/image'
 const About = () => {
 
   return (
-    <div className={css.componentFirst}>
+    <div id='about' className={css.aboutBC}>
       <div className={ css.componentSecond }>
         <div className={css.about}>
           <div className={css.aboutLeft}>
