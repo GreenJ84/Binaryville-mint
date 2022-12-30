@@ -1,0 +1,10 @@
+{
+    "description": "Binaryville Robot",
+    "mage": "ipfs://QmNTvG422KrrnKZ1keuuVKC6mqk3de6ypLuGpW8cBW39aK",
+    "name": "Earnie",
+    "attributes": [
+        { "trait_type": "Base", "value": "Cube Head" },
+        { "trait_type": "Color", "value": "Green" },
+        { "trait_type": "Expression", "value": "Short Circuited" }
+    ]
+}
