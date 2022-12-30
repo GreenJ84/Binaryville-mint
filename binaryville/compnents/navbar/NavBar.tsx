@@ -7,10 +7,16 @@ const { ethers } = require("ethers");
 import  Logo from '../../utils/icons/Logo.svg'
 import header1 from '../../utils/image/header1.png'
 import header2 from '../../utils/image/header2.png'
+import { jsonABI } from '../../utils/jsonABI';
+import { FormatTypes, Interface } from 'ethers/lib/utils';
+import { providers, Signer } from 'ethers';
 
 const css = require('./navbar.module.css')
 
-let address, signer, provider;
+let address: string | null, signer: Signer, provider;
+const iface = new Interface(jsonABI);
+iface.format(FormatTypes.full);
+
 declare let window: any;
 
 const Navbar = () => {
@@ -33,8 +39,14 @@ const Navbar = () => {
     await provider.send("eth_requestAccounts", []);
     signer = provider.getSigner();
     setAddress(await signer.getAddress());
+
+    let balance = await signer.getBalance();
+    console.log(await ethers.utils.formatEther(balance));
   }
-  const mintNFT = () => {
+
+  const mintNFT = async () => {
+    const nftContract = new ethers.Contract('0x5FbDB2315678afecb367f032d93F642f64180aa3', iface, signer);
+    const nftData = await nftContract.mintNFT(address, '');
     
   }
 
