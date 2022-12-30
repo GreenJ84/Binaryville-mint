@@ -1,10 +1,11 @@
 .navbar {
   display: flex;
   justify-content: center;
-  padding: 0 50px;
+  padding: 30px 50px;
   border-radius: 12px;
   flex-direction: column;
   align-items: center;
+  background-color: lightgray;
 }
 
 .navbarContainer, .navbarContainer2 {
@@ -23,8 +24,6 @@
   position: relative;
   width: 90%;
   margin: 0 auto;
-
-  box-shadow: 0 3px .5px black;
 }
 
 .navbarCenterTop {
@@ -38,7 +37,7 @@
 }
 
 .navbarCenterItem {
-  color: var(--color-text-main);
+  color: #000000;
   font-weight: 400;
   font-size: 2vw;
   margin: 0 3.4vw 1vw;
@@ -102,16 +101,20 @@
   margin-top: 15px;
 }
 
+.textHighlight{
+  color: #ff583d;
+}
+
 .navbarBoxButton {
   width: 100%;
-  background-color: var(--color-main);
+  background-color: #ff583d;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 31px;
   margin-top: 30px;
   border-radius: 12px;
-  color: var(--color-white);
+  color: #ffffff;
   font-weight: 400;
   font-size: 16px;
   line-height: 94.8%;
