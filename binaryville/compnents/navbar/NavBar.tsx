@@ -1,6 +1,8 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
+
+const { ethers } = require("ethers");
 
 import  Logo from '../../utils/icons/Logo.svg'
 import header1 from '../../utils/image/header1.png'
@@ -8,7 +10,33 @@ import header2 from '../../utils/image/header2.png'
 
 const css = require('./navbar.module.css')
 
+let address, signer, provider;
+declare let window: any;
+
 const Navbar = () => {
+
+  const [isConnected, toggleConnection] = useState(false);
+  
+  const setAddress = (_address: any) => {
+    address = _address;
+    if (address != null) { toggleConnection(!isConnected); }
+    console.log('Account: ', address);
+    alert("Connected " + address);
+  }
+
+  const handleButton = () => {
+    if (!isConnected) { connectWallet() }
+    else{ mintNFT() }
+  }
+  const connectWallet = async () => {
+    provider = new ethers.providers.Web3Provider(window.ethereum);
+    await provider.send("eth_requestAccounts", []);
+    signer = provider.getSigner();
+    setAddress(await signer.getAddress());
+  }
+  const mintNFT = () => {
+    
+  }
 
   return (
     <div className={ css.navbar}>
@@ -47,7 +75,7 @@ const Navbar = () => {
               <span className={ css.textHighlight }>Welcome</span> to Binaryville
             </div>
             <div className={ css.navbarBoxSubTitle }>a collection of 5,000 unique NFTs</div>
-            <div className={ css.navbarBoxButton }>MINT NOW</div>
+            <div id="nftbutton" className={ css.navbarBoxButton } onClick={handleButton}>{isConnected? 'MINT NOW' : 'CONNECT WALLET'}</div>
           </div>
         </div>
         <div className={ css.navbarRight }>
