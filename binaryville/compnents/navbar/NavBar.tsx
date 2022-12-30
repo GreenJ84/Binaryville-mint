@@ -46,8 +46,9 @@ const Navbar = () => {
 
   const mintNFT = async () => {
     const nftContract = new ethers.Contract('0x5FbDB2315678afecb367f032d93F642f64180aa3', iface, signer);
-    const nftData = await nftContract.mintNFT(address, '');
+    const nftData = await nftContract.mintNFT(address, 'https://gateway.pinata.cloud/ipfs/QmYiV4mHaW5XQ7j8DHMiUdtLE7yf45H7wcNWuyehxf6yYS');
     
+    console.log(nftData);
   }
 
   return (
